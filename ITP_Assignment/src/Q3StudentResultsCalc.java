@@ -3,12 +3,10 @@ import java.util.Scanner;
 public class Q3StudentResultsCalc {
     public static void main(String[] args){
 
-        //don't forget to remove the results in numbers (line 24)
-
-
         double test, lab, asg, mark;
 
         Scanner obj = new Scanner(System.in);
+
 
         System.out.print("Please enter Test marks: ");
         test = obj.nextDouble();
@@ -19,9 +17,8 @@ public class Q3StudentResultsCalc {
         System.out.print("Please enter Assignment marks: ");
         asg = obj.nextDouble();
 
-        mark = (test + lab + asg) / 3;
 
-        System.out.println(mark);
+        mark = (test + lab + asg) / 3;
 
         if (mark > 100){
             System.out.print("Invalid mark");
