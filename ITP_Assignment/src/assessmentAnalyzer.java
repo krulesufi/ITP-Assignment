@@ -1,4 +1,15 @@
+import java.util.Scanner;
+
 public class assessmentAnalyzer{
+    private static String[] studentIDs;        
+    private static String[] studentNames;      
+    private static int[] testMarks;            
+    private static int[] labMarks;             
+    private static int[] assignmentMarks;      
+    private static int[] overallMarks;         
+    private static String[] grades;            
+    private static int numStudents = 0; 
+    
     public static void main(String[] args){
         System.out.print("Hello, world)");
         
