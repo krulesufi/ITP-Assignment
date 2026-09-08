@@ -1,9 +1,7 @@
-public class Main{
+public class assessmentAnalyzer{
     public static void main(String[] args){
         System.out.print("Hello, world)");
-        System.out.print("Hello, world)");
-        System.our.print("Hello, world");
-        // testing
+        
 
     }
 }
