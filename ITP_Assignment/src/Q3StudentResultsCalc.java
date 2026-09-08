@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Qs3StudentResultsCalc {
+public class Q3StudentResultsCalc {
     public static void main(String[] args){
 
         //don't forget to remove the results in numbers (line 24)
