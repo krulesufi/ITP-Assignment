@@ -96,7 +96,7 @@ private static void inputStudentData(Scanner input) {
 				
 			} while (assignmentMarks[i] < 0 || assignmentMarks[i] > 40);
 
-			//overall marks not yet done(Arsad Question 3) // use the calculateOverallMark method
+			//overall marks and grade not yet done(Arsad Question 3) // use the calculateOverallMark method
 	
 		}
 		
