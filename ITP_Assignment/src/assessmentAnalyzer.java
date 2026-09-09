@@ -1,96 +1,3 @@
-package Assessment1;
-
-import java.util.Scanner;
-
-public class Question1 {
-
-	public static void main(String[] args) {
-		
-		Scanner input = new Scanner(System.in);
-		
-		//Question 1: Input number of students
-		int numStudents;
-		
-		do {
-			System.out.print("Enter number of students (5-30): ");
-			numStudents = input.nextInt();
-			
-			if (numStudents < 5 || numStudents > 30) {
-				System.out.println("Invalid number. Please enter between 5 and 30.");
-				
-		    }
-
-		} while (numStudents < 5 || numStudents > 30);
-		
-		//Question 2: Create arrays
-		String[] studentID = new String[numStudents];
-		String[] studentName = new String[numStudents];
-		int[] testMark = new int[numStudents];
-		int[] labMark = new int[numStudents];
-		int[] assignmentMark = new int[numStudents];
-		
-		
-		//Question 2: Student Data Entry
-		for (int i = 0; i < numStudents; i++) {
-			
-			System.out.println("\nStudent " + (i + 1));
-			
-			
-			//Student ID
-			System.out.print("Student ID: ");
-			studentID[i] = input.next();
-			
-			
-			//Student Name
-			input.nextLine();
-			System.out.print("Student Name: ");
-			studentName[i] = input.nextLine();
-			
-			
-			//Test Mark
-			do {
-				System.out.print("Test mark (0-30): ");
-				testMark[i] = input.nextInt();
-				
-				if (testMark[i] < 0 || testMark[i] > 30) {
-					System.out.println("Invalid mark entered. Please enter a mark between 0 and 30.");
-				}
-				
-			} while (testMark[i] < 0 || testMark[i] > 30);
-			
-			
-			//Lab Mark
-			do {
-				System.out.print("Lab mark (0-30): ");
-				labMark[i] = input.nextInt();
-				
-				if (labMark[i] < 0 || labMark[i] > 30) {
-					System.out.println("Invalid mark entered. Please enter a mark between 0 and 30.");
-				}
-				
-			} while (labMark[i] < 0 || labMark[i] > 30);
-			
-			
-			//Assignment Mark
-			do {
-				System.out.print("Assignment mark (0-40): ");
-				assignmentMark[i] = input.nextInt();
-				
-				if (assignmentMark[i] < 0 || assignmentMark[i] > 40) {
-					System.out.println("Invalid mark entered. Please enter a mark between 0 and 40.");
-				}
-				
-			} while (assignmentMark[i] < 0 || assignmentMark[i] > 40);
-		}
-		
-		System.out.println("\nAll student data has been entered successfully.");
-		
-		input.close();
-	}
-	
-}
-
-
 import java.util.Scanner;
 
 public class assessmentAnalyzer{
@@ -104,11 +11,81 @@ public class assessmentAnalyzer{
     private static int numStudents = 0; 
     
     public static void main(String[] args){
-        System.out.print("Hello, world)");
-        
+        Scanner input = new Scanner(System.in);
 
+		studentIDs = new String[numStudents];
+        studentNames = new String[numStudents];
+        testMarks = new int[numStudents];
+        labMarks = new int[numStudents];
+        assignmentMarks = new int[numStudents];
+        overallMarks = new int[numStudents];
+        grades = new String[numStudents];
+
+		//Below will be the switch case vvv
+
+		input.close();
     }
 }
+
+//Question 1
+private static int inputNumberOfStudents(Scanner input) {
+	int numStudents;
+		
+		do {
+			System.out.print("Enter number of students (5-30): ");
+			numStudents = input.nextInt();
+			
+			if (numStudents < 5 || numStudents > 30) {
+				System.out.println("Invalid number. Please enter between 5 and 30.");
+				
+		    }
+
+		} while (numStudents < 5 || numStudents > 30);
+	return numStudents;
+	
+}
+
+//Question 2
+private static void inputStudentData(Scanner input) {
+	do {
+				System.out.print("Test mark (0-30): ");
+				testMarks[i] = input.nextInt();
+				
+				if (testMarks[i] < 0 || testMarks[i] > 30) {
+					System.out.println("Invalid mark entered. Please enter a mark between 0 and 30.");
+				}
+				
+			} while (testMarks[i] < 0 || testMarks[i] > 30);
+			
+			
+			//Lab Mark
+			do {
+				System.out.print("Lab mark (0-30): ");
+				labMarks[i] = input.nextInt();
+				
+				if (labMarks[i] < 0 || labMarks[i] > 30) {
+					System.out.println("Invalid mark entered. Please enter a mark between 0 and 30.");
+				}
+				
+			} while (labMarks[i] < 0 || labMarks[i] > 30);
+			
+			
+			//Assignment Mark
+			do {
+				System.out.print("Assignment mark (0-40): ");
+				assignmentMarks[i] = input.nextInt();
+				
+				if (assignmentMarks[i] < 0 || assignmentMarks[i] > 40) {
+					System.out.println("Invalid mark entered. Please enter a mark between 0 and 40.");
+				}
+				
+			} while (assignmentMarks[i] < 0 || assignmentMarks[i] > 40);
+		}
+		
+		System.out.println("\nAll student data has been entered successfully.");
+	
+}
+	
 
 /*
 VARIABLES USED FROM PREVIOUS QUESTIONS:
