@@ -13,6 +13,8 @@ public class assessmentAnalyzer{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
+		numStudents = inputNumberOfStudents(input);
+
 		studentIDs = new String[numStudents];
         studentNames = new String[numStudents];
         testMarks = new int[numStudents];
@@ -21,7 +23,9 @@ public class assessmentAnalyzer{
         overallMarks = new int[numStudents];
         grades = new String[numStudents];
 
-		//Below will be the switch case vvv
+		inputStudentData(input);
+
+		//Below will be the switch case vvv (menu driven)
 
 		input.close();
     }
@@ -47,7 +51,18 @@ private static int inputNumberOfStudents(Scanner input) {
 
 //Question 2
 private static void inputStudentData(Scanner input) {
-	do {
+	for (int i = 0; i < numStudents; i++) {
+		//Student ID
+            System.out.print("Student ID: ");
+            studentIDs[i] = input.next();
+
+            //Student Name
+            input.nextLine();
+            System.out.print("Student Name: ");
+            studentNames[i] = input.nextLine();
+
+		//Test Mark
+		do {
 				System.out.print("Test mark (0-30): ");
 				testMarks[i] = input.nextInt();
 				
@@ -58,7 +73,7 @@ private static void inputStudentData(Scanner input) {
 			} while (testMarks[i] < 0 || testMarks[i] > 30);
 			
 			
-			//Lab Mark
+		//Lab Mark
 			do {
 				System.out.print("Lab mark (0-30): ");
 				labMarks[i] = input.nextInt();
@@ -70,7 +85,7 @@ private static void inputStudentData(Scanner input) {
 			} while (labMarks[i] < 0 || labMarks[i] > 30);
 			
 			
-			//Assignment Mark
+		//Assignment Mark
 			do {
 				System.out.print("Assignment mark (0-40): ");
 				assignmentMarks[i] = input.nextInt();
@@ -80,10 +95,39 @@ private static void inputStudentData(Scanner input) {
 				}
 				
 			} while (assignmentMarks[i] < 0 || assignmentMarks[i] > 40);
+
+			//overall marks not yet done(Arsad Question 3) // use the calculateOverallMark method
+	
 		}
 		
 		System.out.println("\nAll student data has been entered successfully.");
 	
+}
+
+//Question 3
+private static int calculateOverallMark(int test, int lab, int assignment) {
+    return test + lab + assignment;
+}
+
+
+//Question 3
+private static String determineGrade(int overall) {
+
+}
+
+//Question 4
+private static void displayMenu() {
+	
+}
+
+//Question 5
+private static void displayAllResults() {
+	
+}
+
+//Question 6
+private static void searchStudent(Scanner input) {
+
 }
 	
 
