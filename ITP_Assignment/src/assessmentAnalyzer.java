@@ -2,10 +2,10 @@
 Module: CI1151 Introduction to Programming
 Group Number: 2
 Group Members:
-1. Name: Khairul Sufi Bin Khairul Ariffin Student ID: B20260183
-2. Name: __________________________ Student ID: _______________
-3. Name: __________________________ Student ID: _______________
-4. Name: __________________________ Student ID: _______________
+1. Name: Khairul Sufi Bin Khairul Ariffin 				Student ID: B20260183
+2. Name: Ammar Abdul Hafiz Bin Haji Ahmad Nizam 		Student ID: B20260161
+3. Name: Ahmad Arsad Baqi Safwan Bin Haji Hasnan 	  	Student ID: B20260664
+4. Name: Mohammad Airel Riezuan Bin Mohammad Nazre 		Student ID: B20260478
 */
 
 import java.util.Scanner;
