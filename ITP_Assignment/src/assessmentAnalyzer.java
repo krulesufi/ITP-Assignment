@@ -119,11 +119,10 @@ private static String determineGrade(int overall) {
 private static void displayMenu() {
 	
 }
-
 //Question 5
 private static void displayAllResults() {
-    private static void displayAllResults() {
     System.out.println("\nALL STUDENT RESULTS");
+
     System.out.printf("%-12s %-20s %-8s %-8s %-12s %-8s %-6s%n",
             "Student ID", "Student Name", "Test", "Lab",
             "Assignment", "Overall", "Grade");
@@ -138,7 +137,6 @@ private static void displayAllResults() {
                 overallMarks[i],
                 grades[i]);
     }
-}
 }
 
 //Question 6
@@ -167,7 +165,7 @@ private static void searchStudent(Scanner input) {
     if (!found) {
         System.out.println("Student ID not found.");
     }
-
+}
 	
 
 /*
