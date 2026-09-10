@@ -122,13 +122,52 @@ private static void displayMenu() {
 
 //Question 5
 private static void displayAllResults() {
-	
+    private static void displayAllResults() {
+    System.out.println("\nALL STUDENT RESULTS");
+    System.out.printf("%-12s %-20s %-8s %-8s %-12s %-8s %-6s%n",
+            "Student ID", "Student Name", "Test", "Lab",
+            "Assignment", "Overall", "Grade");
+
+    for (int i = 0; i < numStudents; i++) {
+        System.out.printf("%-12s %-20s %-8d %-8d %-12d %-8d %-6s%n",
+                studentIDs[i],
+                studentNames[i],
+                testMarks[i],
+                labMarks[i],
+                assignmentMarks[i],
+                overallMarks[i],
+                grades[i]);
+    }
+}
 }
 
 //Question 6
 private static void searchStudent(Scanner input) {
+    System.out.print("\nEnter Student ID to search: ");
+    String searchID = input.next();
 
-}
+    boolean found = false;
+
+    for (int i = 0; i < numStudents; i++) {
+        if (studentIDs[i].equalsIgnoreCase(searchID)) {
+            System.out.println("\nSTUDENT FOUND");
+            System.out.println("Student ID      : " + studentIDs[i]);
+            System.out.println("Student Name    : " + studentNames[i]);
+            System.out.println("Test Mark       : " + testMarks[i]);
+            System.out.println("Lab Mark        : " + labMarks[i]);
+            System.out.println("Assignment Mark : " + assignmentMarks[i]);
+            System.out.println("Overall Mark    : " + overallMarks[i]);
+            System.out.println("Grade           : " + grades[i]);
+
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        System.out.println("Student ID not found.");
+    }
+
 	
 
 /*
