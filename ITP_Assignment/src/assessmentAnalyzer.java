@@ -1,3 +1,13 @@
+/*
+Module: CI1151 Introduction to Programming
+Group Number: 2
+Group Members:
+1. Name: Khairul Sufi Bin Khairul Ariffin Student ID: B20260183
+2. Name: __________________________ Student ID: _______________
+3. Name: __________________________ Student ID: _______________
+4. Name: __________________________ Student ID: _______________
+*/
+
 import java.util.Scanner;
 
 public class assessmentAnalyzer{
