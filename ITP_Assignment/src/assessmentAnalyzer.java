@@ -104,20 +104,149 @@ private static void inputStudentData(Scanner input) {
 	
 }
 
+
 //Question 3
-private static int calculateOverallMark(int test, int lab, int assignment) {
+private static double calculateOverallMark(double test, double lab, double assignment) {
     return test + lab + assignment;
 }
 
 
 //Question 3
-private static String determineGrade(int overall) {
+private static void determineGrade(double overall) {
+	
+	if (overall > 100){
+            System.out.print("Invalid overall");
+
+        }else if(overall >= 85){
+            System.out.print("Grade: A+");
+
+        }else if(overall >= 75){
+            System.out.print("Grade: A");
+
+        }else if(overall >= 70){
+            System.out.print("Grade: B+");
+
+        }else if(overall >= 65){
+            System.out.print("Grade: B");
+
+        }else if(overall >= 60){
+            System.out.print("Grade: C+");
+
+        }else if(overall >= 55){
+            System.out.print("Grade: C");
+
+        }else if(overall >= 50){
+            System.out.print("Grade: D+");
+
+        }else if(overall >= 45){
+            System.out.print("Grade: D");
+
+        }else if(overall >= 40){
+            System.out.print("Grade: E");
+
+        }else if(overall <= 39){
+            System.out.print("Grade: F");
+        }
 
 }
 
 //Question 4
-private static void displayMenu() {
+private static void displayMenu(int choice) {
 	
+		Scanner obj = new Scanner(System.in);
+
+        System.out.print("\nSTUDENT ASSESSMENT ANALYZER\n");
+        System.out.print("1. Display All Student Results\n");
+        System.out.print("2. Search for a Student\n");
+        System.out.print("3. Display Class Statistics\n");
+        System.out.print("4. Display Students by Grade\n");
+        System.out.print("5. Performance Analysis\n");
+        System.out.print("6. Exit\n");
+
+        System.out.print("\nPlease enter an option (integer only): ");
+        choice = obj.nextInt();
+
+        //just replace the System.out.print to whatever you need in your question.
+
+        switch (choice){
+            case 1:
+                System.out.print("\n1\n");
+                break;
+
+            case 2:
+                System.out.print("\n2\n");
+                break;
+
+            case 3:
+                System.out.print("\n3\n");
+                break;
+
+            case 4:
+                System.out.print("\n4\n");
+                break;
+
+            case 5:
+                System.out.print("\n5\n");
+                break;
+
+            case 6:
+                System.out.print("\n6\n");
+                System.out.print("Thank you for using the program!");
+                break;
+
+            default:
+                System.out.print("\nInvalid choice. Please try again.");
+                break;
+
+        }
+
+
+        while(choice != 6){
+            System.out.print("\nSTUDENT ASSESSMENT ANALYZER\n");
+            System.out.print("1. Display All Student Results\n");
+            System.out.print("2. Search for a Student\n");
+            System.out.print("3. Display Class Statistics\n");
+            System.out.print("4. Display Students by Grade\n");
+            System.out.print("5. Performance Analysis\n");
+            System.out.print("6. Exit\n");
+
+            System.out.print("\nPlease enter an option(integer only): ");
+            choice = obj.nextInt();
+
+
+            switch (choice) {
+                case 1:
+                    System.out.print("\n1\n");
+                    break;
+
+                case 2:
+                    System.out.print("\n2\n");
+                    break;
+
+                case 3:
+                    System.out.print("\n3\n");
+                    break;
+
+                case 4:
+                    System.out.print("\n4\n");
+                    break;
+
+                case 5:
+                    System.out.print("\n5\n");
+                    break;
+
+                case 6:
+                    System.out.print("\n6\n");
+                    System.out.print("Thank you for using the program!");
+                    break;
+
+                default:
+                    System.out.print("\nInvalid choice. Please try again.\n");
+                    break;
+            }
+        }
+
+        obj.close();
 }
 
 //Question 5
