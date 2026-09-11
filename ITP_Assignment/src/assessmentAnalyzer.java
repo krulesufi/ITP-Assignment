@@ -168,7 +168,7 @@ public class assessmentAnalyzer {
     //Question 3
     private static String determineGrade(int overall) {
 
-        if (overall >= 855) {
+        if (overall >= 85) {
             return "A+";
         } else if (overall >= 75) {
             return "A";
