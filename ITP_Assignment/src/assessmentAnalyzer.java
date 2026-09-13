@@ -389,7 +389,7 @@ private static void performanceAnalysis() {
     for (int i = 0; i < numStudents; i++) {
         if (overallMarks[i] > classAvg) {
             above++;
-        } else if (overallMarks[i] == (int) classAvg) {
+        } else if (overallMarks[i] == classAvg) {
             equal++;
         } else {
             below++;
