@@ -339,7 +339,7 @@ private static int findLowest(int[] marks) {
 private static void displayByGrade(Scanner input) {
     input.nextLine(); // consume newline
     System.out.print("Enter grade (A+, A, B+, B, C+, C, D+, D, E, F): ");
-    String targetGrade = input.nextLine().trim();
+    String targetGrade = input.nextLine().trim().toUpperCase();
 
     // Validate the grade input
     String[] validGrades = {"A+", "A", "B+", "B", "C+", "C", "D+", "D", "E", "F"};
@@ -358,12 +358,12 @@ private static void displayByGrade(Scanner input) {
 
     boolean found = false;
     System.out.println("\nStudents with grade " + targetGrade + ":");
-    System.out.println("ID\t\tName\t\tOverall");
+    System.out.printf("%-12s %-20s %-8s%n", "ID", "Name", "Overall");
 
     for (int i = 0; i < numStudents; i++) {
         // Compare using .equals() for String comparison
         if (grades[i].equals(targetGrade)) {
-            System.out.println(studentIDs[i] + "\t" + studentNames[i] + "\t" + overallMarks[i]);
+            System.out.printf("%-12s %-20s %-8d%n", studentIDs[i], studentNames[i], overallMarks[i]);
             found = true;
         }
     }
