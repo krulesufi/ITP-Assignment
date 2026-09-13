@@ -266,7 +266,7 @@ private static void displayStatistics() {
     int passCount = 0;
     int failCount = 0;
 
-    // Grade distribution for: A+, A, B+, B, C+, C, D+, D, E, F
+    // Grade distribution
     int[] gradeCounts = new int[10];
     String[] gradeLabels = {"A+", "A", "B+", "B", "C+", "C", "D+", "D", "E", "F"};
 
@@ -294,7 +294,7 @@ private static void displayStatistics() {
     System.out.println("Pass : " + passCount);
     System.out.println("Fail : " + failCount);
 
-    // Display grade distribution (how many students get that grade)
+    // how many students get that grade
     System.out.println("\nGrade Distribution:");
     for (int i = 0; i < gradeLabels.length; i++) {
         System.out.println(gradeLabels[i] + " : " + gradeCounts[i]);
@@ -335,7 +335,7 @@ private static int findLowest(int[] marks) {
 }
 
 
-//Question 8 - Using Scanner input instead of Scanner scanner
+//Question 8
 private static void displayByGrade(Scanner input) {
     input.nextLine(); // consume newline
     System.out.print("Enter grade (A+, A, B+, B, C+, C, D+, D, E, F): ");
@@ -389,7 +389,7 @@ private static void performanceAnalysis() {
     for (int i = 0; i < numStudents; i++) {
         if (overallMarks[i] > classAvg) {
             above++;
-        } else if (overallMarks[i] == classAvg) {
+        } else if (overallMarks[i] == (int) classAvg) {
             equal++;
         } else {
             below++;
